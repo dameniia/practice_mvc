@@ -24,7 +24,6 @@ router.get('/', async (req, res) => {
             searchOptions: req.query
         })
     } catch (error) {
-        console.log(error)
         res.redirect('/')
     }
 
@@ -68,7 +67,6 @@ async function renderNewPage(res, book, hasError = false) {
         res.render('books/new', params)
     } catch (error) {
         res.redirect('/books')
-        console.log(error)
     }
 }
 
